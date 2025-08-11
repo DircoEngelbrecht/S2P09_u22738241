@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+  
+    @if (TempData["Msg"] != null)
+    {<div class="alert alert-success">@TempData["Msg"]</div>}
+    <div class="jumbotron">
+        <h1>Social Club Membership</h1>
+        <p>This app allows to register students for a club, update student details, or delete the student.</p>
+        <p>Clubs: Blue Sky, Rotary, Red Hat, Spicy</p>
+        <p>
+            @Html.ActionLink("Insert", "Insert", "Members", null, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Update", "Update", "Members", new { id = 1 }, new { @class = "btn btn-warning", style = "margin-left:8px" })
+            @Html.ActionLink("Delete", "Delete", "Members", new { id = 1 }, new { @class = "btn btn-danger", style = "margin-left:8px" })
+        </p>
+    </div>
+</main>

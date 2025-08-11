@@ -1,0 +1,26 @@
+﻿@model S2P09_u22738241.Models.Member
+@{
+    ViewBag.Title = "Insert Member";
+}
+<h3>Insert Member</h3>
+@using (Html.BeginForm("DoInsert", "Members", FormMethod.Get))
+{
+    <div>
+        <input type="text" name="fullName" class="form-control" placeholder="Full Name" required style="margin-bottom:10px;" />
+       
+        <select name="clubName" class="form-control" required style="margin-bottom:10px;">
+            <option value="">Choose Club</option>
+            <option value="Blue Sky">Blue Sky</option>
+            <option value="Rotary">Rotary</option>
+            <option value="Red Hat">Red Hat</option>
+            <option value="Spicy">Spicy</option>
+        </select>
+       
+        <input type="number" name="Age" class="form-control" placeholder="Age" required style="margin-bottom:10px;" />
+        <input type="number" step="0.01" name="memberFee" class="form-control" placeholder="Fee" required style="margin-bottom:10px;" />
+        <button type="submit" class="btn btn-primary">Insert</button>
+    </div>
+}
+
+
+

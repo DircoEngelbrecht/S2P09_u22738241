@@ -1,0 +1,16 @@
+﻿@model S2P09_u22738241.Models.Member
+@{
+    ViewBag.Title = "Update Member";
+}
+
+<h3 style="margin-top:20px">Update Member</h3>
+@using (Html.BeginForm("DoUpdate", "Members", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <input type="number" name="id" class="form-control" placeholder="Id" required style="margin-bottom:10px;" />
+        <input type="text" name="fullName" class="form-control" placeholder="Full Name" required style="margin-bottom:10px;" />
+        <button type="submit" class="btn btn-warning">Update</button>
+    </div>
+}
+

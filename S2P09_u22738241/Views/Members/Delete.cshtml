@@ -1,0 +1,14 @@
+﻿@model S2P09_u22738241.Models.Member
+@{
+    ViewBag.Title = "Delete Member";
+}
+<h3 style="margin-top:20px">Delete Member</h3>
+@using (Html.BeginForm("DoDelete", "Members", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div>
+        <input type="number" name="id" class="form-control" placeholder="Id" required style="margin-bottom:10px;" />
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+}
+
